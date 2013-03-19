@@ -33,7 +33,7 @@ function get_ips()
 
 function get_flavor()
 {
-    flavor=`grep "flavor" ./ins_details.tmp | awk '{print $4$5}'`
+    flavor=`grep "flavor" ./ins_details.tmp | awk '{print $4}'`
     echo "$flavor," >> ./checklist_${host}.csv
 }
 

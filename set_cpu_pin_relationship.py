@@ -25,6 +25,15 @@ ecus_usage_by_flavor={
     'tiny.c'  : {'ecus': 2,
                  'vcpus': 1,
                  'ecus_per_vcpu': 2},
+    'tiny.d'  : {'ecus': 2,
+                 'vcpus': 1,
+                 'ecus_per_vcpu': 2},
+    'tiny.e'  : {'ecus': 2,
+                 'vcpus': 1,
+                 'ecus_per_vcpu': 2},
+    'tiny.f'  : {'ecus': 2,
+                 'vcpus': 1,
+                 'ecus_per_vcpu': 2},
     'small.a' : {'ecus': 4,
                  'vcpus': 2,
                  'ecus_per_vcpu': 2},
@@ -143,7 +152,7 @@ if __name__ == "__main__":
     else:
         instances_file = sys.argv[1]
     _check_ecus_usage_by_flavor()
-    
+
     # test
     flavors = [flavor for flavor in ecus_usage_by_flavor.keys()]
     uuids = ["uuid-%04d" % id for id in range(1, len(flavors) + 1)]
@@ -166,7 +175,7 @@ if __name__ == "__main__":
         lines = f.readlines()
     print lines
     for line in lines:
-        line = line.replace(' ', '')
+        line = line.replace(' ', '').replace('\r', '').replace('\n', '')
         instance = line.split(',')
         print instance
         uuid = instance[0]
@@ -176,7 +185,8 @@ if __name__ == "__main__":
     print instances
 
     print "---------------------------------------------"
-    with open("./cpu_qos.sql", 'w') as f:
+    sql_file = './' + instances_file.rsplit('.', 1)[0] + '_cpuqos.sql'
+    with open(sql_file, 'w') as f:
         for ins in instances:
             print "calc cpu_pin_relationship for %s(%s)" % \
                     (ins['uuid'], ins['flavor'])
