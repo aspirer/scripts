@@ -1,0 +1,23 @@
+<nbsdisks>
+  <domain>
+    <uuid>5ccc20a8-e032-4452-9668-8b6832a7f37f</uuid>
+    <disk type='file' device='disk'>
+      <driver name='qemu' type='qcow2' cache='none'/>
+      <source file='/home/openstack/nova/instances/instance-00000611/disk.local'/>
+      <target dev='vdb' bus='virtio'/>
+      <alias name='virtio-disk1'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x05' function='0x0'/>
+    </disk>
+  </domain>
+  
+  <domain>
+    <uuid>5ccc20a8-e032-4452-9668-8b6832a7f37f</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='qcow2' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_867bd1767a144ae08da37e29ebf13eab_52210_561470658'/>
+      <target dev='vdb' bus='virtio'/>
+      <alias name='virtio-disk1'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x05' function='0x0'/>
+    </disk>
+  </domain>
+</nbsdisks> 
