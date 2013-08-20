@@ -1,23 +1,714 @@
-<nbsdisks>
-  <domain>
-    <uuid>5ccc20a8-e032-4452-9668-8b6832a7f37f</uuid>
-    <disk type='file' device='disk'>
-      <driver name='qemu' type='qcow2' cache='none'/>
-      <source file='/home/openstack/nova/instances/instance-00000611/disk.local'/>
-      <target dev='vdb' bus='virtio'/>
-      <alias name='virtio-disk1'/>
-      <address type='pci' domain='0x0000' bus='0x00' slot='0x05' function='0x0'/>
-    </disk>
-  </domain>
-  
-  <domain>
-    <uuid>5ccc20a8-e032-4452-9668-8b6832a7f37f</uuid>
+<nbsroot>
+<domain type='kvm'>
+  <uuid>a1885e82-f3a3-435b-9579-ea005fb2d1c8</uuid>
     <disk type='block' device='disk'>
-      <driver name='qemu' type='qcow2' cache='none'/>
-      <source dev='/dev/mapper/ebsdisk01_867bd1767a144ae08da37e29ebf13eab_52210_561470658'/>
-      <target dev='vdb' bus='virtio'/>
-      <alias name='virtio-disk1'/>
-      <address type='pci' domain='0x0000' bus='0x00' slot='0x05' function='0x0'/>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_708_1577343758'/>
+      <target dev='vdc' bus='virtio'/>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
     </disk>
-  </domain>
-</nbsdisks> 
+</domain>
+<domain type='kvm'>
+  <uuid>d74bd064-0c7a-4e12-a37d-253b2faa5282</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_724_1703179687'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>252094314</total_bytes_sec>
+        <total_iops_sec>212</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>f7dad88a-b093-4bdb-8d17-5944b8ceeb32</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_754_717611872'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>102917072</total_bytes_sec>
+        <total_iops_sec>86</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>dfd67487-4009-47e1-808e-07011b15afee</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_773_2258048065'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>343922706</total_bytes_sec>
+        <total_iops_sec>288</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>4a3e53ac-ab40-4543-bb84-4022154a9fc3</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_787_107138199'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>65090472</total_bytes_sec>
+        <total_iops_sec>54</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>7049025c-6c6e-4632-9bc5-4e21d709e11b</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_7a377e7559bc45b48adea45323486e46_789_2163956600'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>130180944</total_bytes_sec>
+        <total_iops_sec>108</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>493f45ac-349a-4380-9ff5-c3249e07d353</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_0f9a69c5848a4bd2bd05b8635849f8e0_475_2001728399'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>102917072</total_bytes_sec>
+        <total_iops_sec>86</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_0f9a69c5848a4bd2bd05b8635849f8e0_617_3433029963'/>
+      <target dev='vdd' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>65090472</total_bytes_sec>
+        <total_iops_sec>54</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x11' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>861b1abe-c5a4-4725-93a3-a0abec09efc1</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_0c5124eeec664a3ab5812f74c25a1d14_768_3007636757'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>112740004</total_bytes_sec>
+        <total_iops_sec>94</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>4e70c800-b752-4c49-a853-71f28888a906</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_0f9a69c5848a4bd2bd05b8635849f8e0_780_2197530006'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>130180944</total_bytes_sec>
+        <total_iops_sec>108</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>076820fc-ad18-4ab4-8ab8-b9884f384501</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_a07d6769fc2247b4bb1d98ece62cb235_784_1968269602'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>65090472</total_bytes_sec>
+        <total_iops_sec>54</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>1acb9a98-dd71-4b0e-b33a-e3f55f7f0e28</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_725_310592817'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>252094314</total_bytes_sec>
+        <total_iops_sec>212</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>e2c49c45-e1ce-4d5e-8dee-391e9d838b2f</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_748_979934730'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>102917072</total_bytes_sec>
+        <total_iops_sec>86</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>26d760a7-3348-40b5-8f7c-4f510d8ba31b</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_755_1573049334'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>102917072</total_bytes_sec>
+        <total_iops_sec>86</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>c3df947a-9398-4107-9754-0526d4482e6a</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_758_594784075'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>79719222</total_bytes_sec>
+        <total_iops_sec>66</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>e4e89e76-2183-4bf4-8960-4d4895c7c3a9</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_759_1416929245'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>79719222</total_bytes_sec>
+        <total_iops_sec>66</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>8d7a7c54-d5d7-4c9f-99fa-ffbc57c2f5ec</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_762_3901429142'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>79719222</total_bytes_sec>
+        <total_iops_sec>66</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>ccc6f5f9-ae6a-4aac-9cdc-8c6768d06785</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_786_1902509057'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>65090472</total_bytes_sec>
+        <total_iops_sec>54</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>6f12898b-9a6b-442f-a426-ecaa49d30c0a</uuid>
+</domain>
+<domain type='kvm'>
+  <uuid>8766bbec-716d-44d9-bbfb-0f86aed2d65e</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_790_2166188149'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>79719222</total_bytes_sec>
+        <total_iops_sec>66</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>ef6cc0f1-a83e-44ad-8720-e259e80b9ef5</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_795_4051148026'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>145546720</total_bytes_sec>
+        <total_iops_sec>122</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>188e8e1e-fd94-4fe1-b6b6-971c3c974f29</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_0c5124eeec664a3ab5812f74c25a1d14_465_3484624881'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>112740004</total_bytes_sec>
+        <total_iops_sec>94</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>5d034366-19e5-454f-8d79-f0dc9352ebee</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8282eee5d4cc4349a22c9e2049d1a5c6_587_2457164371'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>145546720</total_bytes_sec>
+        <total_iops_sec>122</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>56b838e8-0b47-498e-9b0a-c6b778379656</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8282eee5d4cc4349a22c9e2049d1a5c6_588_46811074'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>145546720</total_bytes_sec>
+        <total_iops_sec>122</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>a0dfa6ed-6a1b-4a25-afaf-3f0d034ca74b</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_749_1299164828'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>102917072</total_bytes_sec>
+        <total_iops_sec>86</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>e2239c01-a385-4946-97c2-1ea84517d1bc</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_756_3301671500'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>65090472</total_bytes_sec>
+        <total_iops_sec>54</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>32d1bcd5-f4ff-40c8-b76e-3fa93627ccf5</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_761_1904362540'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>79719222</total_bytes_sec>
+        <total_iops_sec>66</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>f8b199a8-de70-43d2-938f-ab091f9e9494</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_772_4052755671'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>205834146</total_bytes_sec>
+        <total_iops_sec>172</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>df19f81c-292d-44b9-8deb-df035f833906</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_1c65a393e91c4e6ea29d63cfdd10113a_706_2042971255'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>130180944</total_bytes_sec>
+        <total_iops_sec>108</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>ffd8bb22-be5d-4b7b-afbb-6e0c76f4d1de</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_0f9a69c5848a4bd2bd05b8635849f8e0_663_2226369429'/>
+      <target dev='vde' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>46025914</total_bytes_sec>
+        <total_iops_sec>38</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x12' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>e980ce52-a0ae-410b-a1a4-3a6f3793c9d2</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_0c5124eeec664a3ab5812f74c25a1d14_769_3292779907'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>112740004</total_bytes_sec>
+        <total_iops_sec>94</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>6b392e6d-3fb1-4aee-807a-470186da3f8e</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_0666a6661b28426e987870ac5c86578a_799_762407903'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>46025914</total_bytes_sec>
+        <total_iops_sec>38</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+
+<domain type='kvm'>
+  <uuid>109f3e18-b348-4df7-a052-dd6eab0d0c74</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_1c65a393e91c4e6ea29d63cfdd10113a_705_3771471309'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>130180944</total_bytes_sec>
+        <total_iops_sec>108</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>313158e6-110b-4084-a801-0231819c1822</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_12cf7f27c5e64e9fbed5f35616779c66_527_1955812103'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>145546720</total_bytes_sec>
+        <total_iops_sec>122</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>14e07f57-94d2-40d6-8366-40867a4e76fb</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_770_530466299'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>145546720</total_bytes_sec>
+        <total_iops_sec>122</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>92730e4d-af49-4480-a259-a62ef5aa13da</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_775_1878307188'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>343922706</total_bytes_sec>
+        <total_iops_sec>288</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>aaab721c-313a-4514-a9aa-71c39769b0a6</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_788_2531119366'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>65090472</total_bytes_sec>
+        <total_iops_sec>54</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>9948c5bb-7f16-45f4-8b62-b17dce1e4975</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_7a377e7559bc45b48adea45323486e46_798_4008139439'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>112740004</total_bytes_sec>
+        <total_iops_sec>94</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>91582772-aa3b-48e6-8b5d-0ef0f60d1841</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_0666a6661b28426e987870ac5c86578a_800_2385719055'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>46025914</total_bytes_sec>
+        <total_iops_sec>38</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>7741eb3e-009f-4add-8753-9442b4c68d52</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/vgwd_tang_1_2510856776'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>325452360</total_bytes_sec>
+        <total_iops_sec>272</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>25e1e575-38dc-4d1e-a6e1-f5ed6b990e2d</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_12cf7f27c5e64e9fbed5f35616779c66_492_3872330868'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>92051828</total_bytes_sec>
+        <total_iops_sec>76</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>3f0473ee-4049-43ce-be33-a7921e47105a</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_707_3468379807'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>343922706</total_bytes_sec>
+        <total_iops_sec>288</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>a0889beb-7d53-4c26-838a-446e2b17fc29</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_774_418611682'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>145546720</total_bytes_sec>
+        <total_iops_sec>122</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>8adc9b71-d3d3-4c8c-83da-42e946d62396</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_a07d6769fc2247b4bb1d98ece62cb235_781_87793069'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>65090472</total_bytes_sec>
+        <total_iops_sec>54</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>ea97b4bb-073e-4db5-8a45-3be2d66afa8f</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_757_3016536794'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>65090472</total_bytes_sec>
+        <total_iops_sec>54</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>be4c04f2-3df3-4f18-b800-faddbae96936</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_791_4128921827'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>79719222</total_bytes_sec>
+        <total_iops_sec>66</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>90191bcf-5e02-4879-ad4d-a8cd73f925e8</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_794_2255531116'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>145546720</total_bytes_sec>
+        <total_iops_sec>122</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>61aea195-a721-4877-bb40-4c3eff7e5f1d</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_0666a6661b28426e987870ac5c86578a_801_4180942745'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>46025914</total_bytes_sec>
+        <total_iops_sec>38</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>458056f5-700b-4e2c-8856-f5363d8f5e96</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_0c5124eeec664a3ab5812f74c25a1d14_503_1900564341'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>205834146</total_bytes_sec>
+        <total_iops_sec>172</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>1ac0f6ed-87ee-42aa-a8e4-62f5c9d36364</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_a07d6769fc2247b4bb1d98ece62cb235_699_322522857'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>130180944</total_bytes_sec>
+        <total_iops_sec>108</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>4809944c-80fa-453e-9802-e86fd424d73c</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_355b1ac18a9844129a95e3a539d416fe_738_605899918'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>65090472</total_bytes_sec>
+        <total_iops_sec>54</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>7d58553d-a741-49e2-8351-0ad45b1d48da</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_0f9a69c5848a4bd2bd05b8635849f8e0_752_3646667511'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>343922706</total_bytes_sec>
+        <total_iops_sec>288</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>80d5c27d-b302-42e6-97aa-33ceed0d89f4</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_0f9a69c5848a4bd2bd05b8635849f8e0_779_2092892669'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>130180944</total_bytes_sec>
+        <total_iops_sec>108</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>a7ff0041-e33a-4c8a-98b8-2eb6f45163a1</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_1c65a393e91c4e6ea29d63cfdd10113a_711_4273660053'/>
+      <target dev='vdd' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>130180944</total_bytes_sec>
+        <total_iops_sec>108</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x11' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>b0c8d19a-a258-4fac-a8fe-488919210243</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_12cf7f27c5e64e9fbed5f35616779c66_473_256575852'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>65090472</total_bytes_sec>
+        <total_iops_sec>54</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+<domain type='kvm'>
+  <uuid>8441981d-6ab5-41e9-bb69-b051e0116a72</uuid>
+    <disk type='block' device='disk'>
+      <driver name='qemu' type='raw' cache='none'/>
+      <source dev='/dev/mapper/ebsdisk01_8f80932ab73c42838c483329416760a5_776_4143833294'/>
+      <target dev='vdc' bus='virtio'/>
+      <iotune>
+        <total_bytes_sec>205834146</total_bytes_sec>
+        <total_iops_sec>172</total_iops_sec>
+      </iotune>
+      <address type='pci' domain='0x0000' bus='0x00' slot='0x10' function='0x0'/>
+    </disk>
+</domain>
+</nbsroot>
