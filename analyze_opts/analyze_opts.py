@@ -72,7 +72,8 @@ if __name__ == '__main__':
     parser.add_argument('-s', default='./etc/nova/nova.conf.sample',
                         help='path to nova.conf.sample\
                         (defaults to ./etc/nova/nova.conf.sample')
-    parser.add_argument('-v', default=False, help='report all differences')
+    parser.add_argument('-v', default=False,
+                        help='report all differences(defaults to False)')
 
     options = parser.parse_args()
 
