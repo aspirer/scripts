@@ -111,5 +111,10 @@ if __name__ == '__main__':
         host_name = get_host_name()
         change_host_name(host_name)
         make_instance_tag(instance_id)
+        # gen new ssh host key
+        os.system('rm -f /etc/ssh/ssh_host_*')
+        os.system('ssh-keygen -t dsa -N "" -f /etc/ssh/ssh_host_dsa_key')
+        os.system('ssh-keygen -t rsa -N "" -f /etc/ssh/ssh_host_rsa_key')
+        os.system('ssh-keygen -t ecdsa -N "" -f /etc/ssh/ssh_host_ecdsa_key')
     else:
         print 'Host name has already been changed, exit now.'
