@@ -3,9 +3,12 @@
 
 import httplib
 import os
+import time
 
 
 HTTPTIMEOUT = 3
+MAX_RETRY_TIMES = 3
+WAIT_INTERNAL = 1
 INSTANCE_TAG_DIR = "/var/lib/cloud/nvs/"
 TAG_FILE_NAME = "instance-id"
 INSTANCE_ID_URI = "/2009-04-04/meta-data/instance-id"
@@ -13,21 +16,35 @@ HOST_NAME_URI = "/2009-04-04/meta-data/local-hostname"
 
 
 def send_request(uri):
-    global HTTPTIMEOUT
     url = '169.254.169.254'
     method = 'GET'
     headers = {'Content-type': 'application/json',
                'Accept': 'application/json'}
-    conn = httplib.HTTPConnection(url, timeout=HTTPTIMEOUT)
-    conn.request(method, uri, '', headers)
-    response = conn.getresponse()
-    data = response.read()
-    conn.close()
 
-    if response.status != 200:
-        raise Exception()
-
-    return data
+    for i in range(0, MAX_RETRY_TIMES):
+        try:
+            conn = httplib.HTTPConnection(url, timeout=HTTPTIMEOUT)
+            conn.request(method, uri, '', headers)
+            response = conn.getresponse()
+            data = response.read()
+            conn.close()
+            status = response.status
+            if status in (200, 202):
+                return data
+            else:
+                if i + 1 == MAX_RETRY_TIMES:
+                    msg = ('Unexpected status %(status)s while %(method)s '
+                           '%(uri)s' % locals())
+                    raise Exception(msg)
+                else:
+                    time.sleep(WAIT_INTERNAL)
+                    continue
+        except Exception as e:
+            print 'Exception occurs while %(method)s %(url)s%(uri)s' % locals()
+            if i + 1 == MAX_RETRY_TIMES:
+                raise e
+            else:
+                time.sleep(WAIT_INTERNAL)
 
 
 def get_host_name():
@@ -44,8 +61,6 @@ def get_instance_id():
 
 
 def make_instance_tag(instance_id):
-    global INSTANCE_TAG_DIR
-    global TAG_FILE_NAME
     if not os.path.exists(INSTANCE_TAG_DIR):
         os.makedirs(INSTANCE_TAG_DIR)
 
@@ -55,8 +70,6 @@ def make_instance_tag(instance_id):
 
 
 def is_new_instance(instance_id):
-    global INSTANCE_TAG_DIR
-    global TAG_FILE_NAME
     if not os.path.exists(INSTANCE_TAG_DIR):
         return True
 
@@ -78,7 +91,7 @@ def change_host_name(host_name):
     # change /etc/hostname
     with open('/etc/hostname', 'w') as f:
         f.writelines([host_name, '\n'])
-    # enable new host name immediately 
+    # enable new host name immediately
     os.system("hostname %s" % host_name)
 
     # add new host name to /etc/hosts
