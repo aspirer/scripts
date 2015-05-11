@@ -67,10 +67,10 @@ if __name__ == '__main__':
 
     parser.add_argument('-c', action='store',
                         default='/etc/nova/nova.conf',
-                        help='path to nova.conf\
+                        help='path to config file to be changed\
                         (defaults to /etc/nova/nova.conf)')
-    parser.add_argument('-s', default='./etc/nova/nova.conf.sample',
-                        help='path to nova.conf.sample\
+    parser.add_argument('-t', default='./etc/nova/nova.conf.sample',
+                        help='path to template config file\
                         (defaults to ./etc/nova/nova.conf.sample')
     parser.add_argument('-v', default=False,
                         help='report all differences(defaults to False)')
@@ -79,11 +79,11 @@ if __name__ == '__main__':
 
     conf_file_options = PropertyCollecter.collect_properties(open(options.c))
     sample_conf_file_options = PropertyCollecter.collect_properties(
-        open(options.s), sample_format=True)
+        open(options.t), sample_format=True)
     verbose = _str_to_bool(options.v)
 
     print '-----------------------------------'
-    print 'Configs in template "%s" -NOT- in "%s".' % (options.s, options.c)
+    print 'Configs in template "%s" -NOT- in "%s".' % (options.t, options.c)
     print 'WARNING: These configs may be missed!'
     print '-----------------------------------'
     count = 0
@@ -95,7 +95,7 @@ if __name__ == '__main__':
 
     print ''
     print '-----------------------------------'
-    print 'Configs -NOT- in template "%s" in "%s".' % (options.s, options.c)
+    print 'Configs -NOT- in template "%s" in "%s".' % (options.t, options.c)
     print 'NOTE: These configs may be needless.'
     print '-----------------------------------'
     for k, v in sorted(conf_file_options.items()):
@@ -105,7 +105,7 @@ if __name__ == '__main__':
 
     print ''
     print '-----------------------------------'
-    print 'Different configs of "%s" and "%s".' % (options.s, options.c)
+    print 'Different configs of "%s" and "%s".' % (options.t, options.c)
     print 'NOTE: These configs may be wrong.'
     print '-----------------------------------'
     for k, v in sorted(sample_conf_file_options.items()):
